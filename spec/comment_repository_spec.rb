@@ -7,9 +7,17 @@ def reset_comment_table
 end
 
 describe CommentRepository do
-  before(:each) do 
+  before(:each) do
     reset_comment_table
   end
 
-  # (your tests will go here).
+  describe '#all' do
+    it 'returns an array of Comment objects' do
+      repo = CommentRepository.new
+
+      all_comments = repo.all
+
+      expect(all_comments.length).to eq 10
+    end
+  end
 end

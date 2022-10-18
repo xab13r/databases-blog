@@ -18,4 +18,5 @@ INSERT INTO comments (content, author_name, post_id) VALUES
   ('comment content 6', 'user 6', 4),
   ('comment content 7', 'user 7', 5),
   ('comment content 8', 'user 4', 6),
-  ('comment content 9', 'user 6', 6);
+  ('comment content 9', 'user 6', 6),
+  ('comment content 10', 'user 7', 6);
