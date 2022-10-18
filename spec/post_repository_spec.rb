@@ -26,4 +26,16 @@ describe PostRepository do
       expect(all_posts.last.content).to eq 'content 6'
     end
   end
+  
+  describe "#find_with_comments" do
+    it "returns a list of Comment objects given a Post ID" do
+      repo = PostRepository.new
+      
+      post = repo.find_with_comments(1)
+            
+      expect(post.id).to eq 1
+      expect(post.comments.length).to eq 3
+    
+    end
+  end
 end
